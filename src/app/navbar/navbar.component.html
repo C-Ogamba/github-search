@@ -1,12 +1,17 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand"><b><i class="fa-brands fa-github"></i></b></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
       <a class="nav-item nav-link active">Github search<span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link">About</a>
+      <a class="nav-item nav-link"></a>
     </div>
   </div>
+  <div class="py-2 search">
+    <span class="position-relative d-flex">
+        <input type="text" class="form-control ms-auto" [(ngModel)]="username" (keyup.enter)="search()" placeholder="Search here...">
+        <button class="search-icon h-100 d-flex btn" (click)="search()" >
+            <i class="fa fa-search fs-5 my-auto"></i>
+        </button>
+    </span>
+</div>
 </nav>
