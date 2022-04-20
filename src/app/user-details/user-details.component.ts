@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data-service/data.service';
+
 
 @Component({
   selector: 'app-user-details',
@@ -6,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-details.component.css']
 })
 export class UserDetailsComponent implements OnInit {
-
-  constructor() { }
+   
+  constructor(dataService:DataService) { 
+    
+  }
 
   ngOnInit(): void {
   }
