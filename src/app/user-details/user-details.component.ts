@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { DataService } from '../data-service/data.service';
+import { GithubDetails } from '../github-details';
+import { ActivatedRoute,Router } from '@angular/router';
 
 
 @Component({
@@ -8,12 +10,28 @@ import { DataService } from '../data-service/data.service';
   styleUrls: ['./user-details.component.css']
 })
 export class UserDetailsComponent implements OnInit {
-   
-  constructor(dataService:DataService) { 
+  @Output() onEnterDetail: EventEmitter<any> = new EventEmitter();
     
-  }
+  newGithubDetail!: GithubDetails;
+  search: any;
+  
+   
+  constructor(
+    private dataService:DataService,
+    private active: ActivatedRoute,
+    private Router: Router,
+    private GithubDetails: GithubDetails,
+    
+
+    ) { }
 
   ngOnInit(): void {
+    this.active.params.subscribe((params: any) => {
+      this.search = params.data;
+      this.onEnterDetail.emit(this.search);
+      this.dataService.getDetails(this.search);
+      this.newGithubDetail = this.dataService.newGithubDetail;
+    })
   }
 
 }

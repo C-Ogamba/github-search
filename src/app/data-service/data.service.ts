@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { GithubDetails } from '../github-details';
 import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
-import { resolve } from 'dns';
-import { access } from 'fs';
+// import { resolve } from 'dns';
+// import { access } from 'fs';
 
 @Injectable({
   providedIn: 'root',
