@@ -9,6 +9,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { RepoSectionComponent } from './repo-section/repo-section.component';
+import { FormSearchComponent } from './form-search/form-search.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { RepoSectionComponent } from './repo-section/repo-section.component';
     NotFoundComponent,
     UserDetailsComponent,
     RepoSectionComponent,
+    FormSearchComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
