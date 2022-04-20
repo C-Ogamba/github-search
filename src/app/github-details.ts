@@ -1,8 +1,13 @@
 export class GithubDetails {
-    avatar!: string;
-    name!: string;
-    bio!: string;
-    followers!: number;
-    following!: number;
+    constructor(
+        public avatar: any,
+        public name: string,
+        public bio: string,
+        public followers: number,
+        public following: number,
+    ){}
+
+    
+    
 
 }
