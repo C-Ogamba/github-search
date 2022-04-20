@@ -26,12 +26,12 @@ export class UserDetailsComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-    this.active.params.subscribe((params: any) => {
-      this.search = params.data;
-      this.onEnterDetail.emit(this.search);
-      this.dataService.getDetails(this.search);
-      this.newGithubDetail = this.dataService.newGithubDetail;
-    })
+    // this.active.params.subscribe((params: any) => {
+    //   this.search = params.data;
+    //   this.onEnterDetail.emit(this.search);
+    //   this.dataService.getDetails(this.search);
+    //   this.newGithubDetail = this.dataService.newGithubDetail;
+    // })
   }
 
 }

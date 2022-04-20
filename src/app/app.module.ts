@@ -11,6 +11,7 @@ import { UserDetailsComponent } from './user-details/user-details.component';
 import { RepoSectionComponent } from './repo-section/repo-section.component';
 import { FormSearchComponent } from './form-search/form-search.component';
 import { FormsModule } from '@angular/forms';
+import { DataService } from './data-service/data.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { FormsModule } from '@angular/forms';
     
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
