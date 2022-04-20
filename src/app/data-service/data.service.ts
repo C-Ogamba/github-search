@@ -9,9 +9,9 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class DataService {
-  url: string = 'https://api.github.com/users';
+  url: string = 'https://api.github.com/users/';
   newGithubDetail: GithubDetails;
-  username! : any
+  // username! : any
 
 
   constructor(private http: HttpClient) {

@@ -1,6 +1,6 @@
-<!-- <body class="">
+<body class="">
   <div class=" justify-center items-center mx-auto flex-col w-6/12">
-    <div *ngFor="let repo of repos; let i = index" class="mt-3 flex bg-white p-2">
+    <div *ngFor="let repo of newGithubRepo; let i = index" class="mt-3 flex bg-white p-2">
       <div class="rounded bg-gradient-to-l from-pink-400 to-purple-600 w-full  text-center text-xl">
         <div class="card-header">
           <div class="card-body">
@@ -8,17 +8,17 @@
             <p class="card-text mb-4 font-light">
               {{ repo.description }}
             </p>
-            <a href="{{ repo.svn_url }}" class="rounded-lg border-2 border-pink-500 text-pink-800 p-2 mt-5">View Repo</a>
+            <a href="{{ repo.repo_url }}" class="rounded-lg border-2 border-pink-500 text-pink-800 p-2 mt-5">View Repo</a>
             <p class="mt-3 font-semibold">
               {{ repo.language }}
             </p>
             <div class="flex justify-center items-center mt-2 italic">
               <p class="px-4 font-extralight">created on: {{ repo.created_at|date }}</p>
-              <p class="font-extralight">updated on: {{ repo.updated_at|date }}</p>
+              
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</body> -->
+</body>

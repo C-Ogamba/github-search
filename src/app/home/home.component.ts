@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.route.queryParams.subscribe((params:any) =>{
       this.searchUser= params.data;
-      console.log(params.data)
+      // console.log(params.data)
     })
   }
 
