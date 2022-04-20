@@ -23,6 +23,6 @@ export class FormSearchComponent implements OnInit {
 
   search() {
     if (!this.username) return;
-    this.router.navigate(['user', this.username]);
+    this.router.navigate(['user/${this.username}']);
   }
 }

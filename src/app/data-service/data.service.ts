@@ -11,17 +11,19 @@ import { access } from 'fs';
 export class DataService {
   url: string = 'https://api.github.com/users';
   newGithubDetail: GithubDetails;
+  username! : any
 
 
   constructor(private http: HttpClient) {
     this.newGithubDetail = new GithubDetails("","","",0,0)
   }
 
-  getDetails(search: string){
+  getDetails(username: string){
+    console.log(username)
     let promise = new Promise((resolve, reject) => {
       this.http
       .get<any>(
-        `${this.url}${search}?access_token'=${environment.token}`
+        `${this.url}${username}?access_token'=${environment.token}`
       )
       .toPromise()
       .then(
