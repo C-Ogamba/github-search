@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { DataService } from '../data-service/data.service';
 import { GithubDetails } from '../github-details';
 import { ActivatedRoute,Router } from '@angular/router';
@@ -10,7 +10,7 @@ import { ActivatedRoute,Router } from '@angular/router';
   styleUrls: ['./user-details.component.css']
 })
 export class UserDetailsComponent implements OnInit {
-  @Output() onEnterDetail: EventEmitter<any> = new EventEmitter();
+  @Input() onEnterDetail: EventEmitter<any> = new EventEmitter();
     
   newGithubDetail!: GithubDetails;
   search: any;

@@ -1,10 +1,10 @@
   <div class="py-2 search">
     <span class="position-relative d-flex">
-        <input type="search" class="form-control ms-auto" [(ngModel)]="username"  placeholder="Search here..."#search>
-        <button class="search-icon h-100 d-flex btn" (submit)="searchGithub()" >
+        <input type="search" class="form-control ms-auto" name="username"  [(ngModel)]="username"  placeholder="Search here..."#search>
+        <button class="search-icon h-100 d-flex btn btn-primary" (submit)="searchGithub()" >
             <i class="fa fa-search fs-5 my-auto"></i>
         </button>
-        
+
     </span>
 </div>
 <!-- (keyup.enter)="search()" -->
