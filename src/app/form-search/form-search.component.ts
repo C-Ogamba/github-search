@@ -14,15 +14,17 @@ export class FormSearchComponent implements OnInit {
   constructor(private router: Router, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.route.params.subscribe((params) => {
-      if (params['username']) {
-        this.username = params['username'];
-      }
-    });
+    // this.route.params.subscribe((params) => {
+    //   if (params['username']) {
+    //     this.username = params['username'];
+    //   }
+    // });
   }
 
   searchGithub() {
+    // console.log(this.username)
     if (!this.username) return;
-    this.router.navigate(['user/${this.username}']);
+    this.router.navigate(['user/${this.username}'], {queryParams:{data:this.username
+    }});
   }
 }
