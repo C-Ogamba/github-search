@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter} from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-form-search',
@@ -6,20 +7,22 @@ import { Component, OnInit, Output, EventEmitter} from '@angular/core';
   styleUrls: ['./form-search.component.css'],
 })
 export class FormSearchComponent implements OnInit {
-  
-  username: string = '';
-  @Output() newSearch: EventEmitter<any> = new EventEmitter();
-  showProfileModal: boolean = false;
+ 
+ 
+  username: String = '';
 
-  constructor() {}
+  constructor(private router: Router, private route: ActivatedRoute) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.route.params.subscribe((params) => {
+      if (params['username']) {
+        this.username = params['username'];
+      }
+    });
+  }
 
-  onSubmit(username: string): void {
-    if (username.length > 1) {
-      username = username.replace(/\s/g, '').trim().toLocaleLowerCase();
-      this.newSearch.emit(username);
-      this.username = '';
-    }
+  search() {
+    if (!this.username) return;
+    this.router.navigate(['user', this.username]);
   }
 }
