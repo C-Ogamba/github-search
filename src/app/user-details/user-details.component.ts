@@ -10,6 +10,7 @@ import { ActivatedRoute,Router } from '@angular/router';
   styleUrls: ['./user-details.component.css']
 })
 export class UserDetailsComponent implements OnInit {
+  
   @Input() onEnterDetail: EventEmitter<any> = new EventEmitter();
     
   newGithubDetail!: GithubDetails;
