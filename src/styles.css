@@ -1,3 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+.search {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  width: 40%;
+  height: 40%;
+  background: #d39a24;
+  /* padding-top: 10rem;
+  width: 50vw;
+  height: 45vh; */
+}
+/* .frame {
+  width: fit-content;
+  display: flex;
+  margin: auto;
+  justify-content: right;
+  margin-top: 5rem;
+ border-radius: 5px;
 
-@import "~bootstrap/dist/css/bootstrap.css"
+} */
+.navbar {
+  height: 6.5rem;
+}
+b {
+  font-size: 50px;
+  color: #d39a24;
+}
+.i {
+  color: whitesmoke;
+}
