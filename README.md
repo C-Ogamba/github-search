@@ -1,6 +1,11 @@
 # API
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.2.
+##### By Kemunto Cindy
+
+
+## Description
+<p>A simple web app where users can search and view github profiles</p>
 
 ## Development server
 
