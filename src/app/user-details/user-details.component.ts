@@ -23,8 +23,9 @@ export class UserDetailsComponent implements OnInit {
   {}
 
   ngOnInit(): void {
-    console.log(this.onEnterDetail)
+    // console.log(this.onEnterDetail)
     this.dataService.getDetails(this.onEnterDetail);
     this.newGithubDetail= this.dataService.newGithubDetail;
+    // console.log(this.newGithubDetail.name)
   }
 }

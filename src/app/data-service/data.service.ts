@@ -28,10 +28,10 @@ export class DataService {
       .toPromise()
       .then(
         (response) =>{
-          response = response;
+          response = response;        
           this.newGithubDetail = new GithubDetails(
             (this.newGithubDetail.avatar = response.avatar_url),
-            (this.newGithubDetail.name = response.name),
+            (this.newGithubDetail.login = response.login),
             (this.newGithubDetail.bio = response.bio),
             (this.newGithubDetail.followers = response.followers),
             (this.newGithubDetail.following = response.following)
